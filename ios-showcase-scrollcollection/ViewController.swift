@@ -23,11 +23,6 @@ class FeatureViewController: UICollectionViewController, UICollectionViewDelegat
 		var featuredapp = FeatureCategory.fetchFeaturedApps()
 		self.featuredApps = featuredapp
 		self.featureCategories = featuredapp.categories
-//			{ (featuredApps) -> () in
-//			self.featuredApps = featuredApps
-//			self.featureCategories = featuredApps.categories
-//			self.collectionView?.reloadData()
-//		}
 		
         collectionView?.backgroundColor = UIColor.white
         

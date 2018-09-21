@@ -3,16 +3,16 @@
 		"name":"",
 		"features":[
 				{
-				"ImageName":"enhancedWith3dTouch"
+				"ImageName":"image1"
 				},
 				{
-				"ImageName":"drSeussBanner"
+				"ImageName":"image2"
 				},
 				{
-				"ImageName":"indieGameBanner"
+				"ImageName":"image3"
 				},
 				{
-				"ImageName":"clashRoyaleBanner"
+				"ImageName":"image4"
 				}
 				],
 		"type":""
@@ -39,7 +39,13 @@
 							  "Category":"Viewing",
 							  "Description":"change the presentation mode",
 					
-							  }
+                              },
+                              {
+                              "Name":"Complete viewer",
+                              "Category":"Viewing",
+                              "Description":"see the psd viewer with complete toolbar",
+                              
+                              }
 							  ],
 				  "type":""
 				  },

@@ -11,6 +11,9 @@ import UIKit
 
 class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
+    var ViewingIsExpanded = false
+    var AnnotationIsExpanded = false
+    
     var featureCategory: FeatureCategory? {
         didSet {
             
@@ -60,12 +63,22 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         return view
     }()
     
+    let seeAllButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("seeAll", for: .normal)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.titleLabel?.font = UIFont(name:"Times New Roman", size: 16)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     func setupViews() {
         backgroundColor = UIColor.clear
         
         addSubview(featureCollectionView) //add column subviews into rows
         addSubview(dividerLineView)
         addSubview(nameLabel)
+        addSubview(seeAllButton)
         
         featureCollectionView.dataSource = self
         featureCollectionView.delegate = self
@@ -73,12 +86,13 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         featureCollectionView.register(FeatureCell.self, forCellWithReuseIdentifier: cellId)
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": nameLabel]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": seeAllButton]))
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dividerLineView]))
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": featureCollectionView])) //expand from left to right
 
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[nameLable(30)][v0][v1(0.5)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": featureCollectionView, "v1": dividerLineView, "nameLable": nameLabel]))//expand from top to bottom
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[nameLable(30)][seeAllButton(20)][v0][v1(0.5)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": featureCollectionView, "v1": dividerLineView, "nameLable": nameLabel, "seeAllButton": seeAllButton]))//expand from top to bottom
     
     }
     
@@ -99,11 +113,6 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-//        if indexPath.item == 2 {
-//            return CGSize(width: view.frame.width, height: 160)
-//        }
-//
-//        return CGSize(width: view.frame.width, height: 230)
         return CGSize(width: 100, height: frame.height - 32)
     }
     
