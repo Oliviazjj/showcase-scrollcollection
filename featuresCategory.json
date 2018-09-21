@@ -1,0 +1,46 @@
+{
+    "categories":[
+                  {
+                  "name":"Viewing",
+                  "features":[
+                          {
+                          "Id":1,
+                          "Name":"View mode",
+                          "Category":"Viewing",
+                          "Price":3.99,
+                          "ImageName":"image1"
+                          },
+                          {
+                          "Name":"Basic PDF Viewer",
+                          "Category":"Viewing",
+                          "ImageName":"image2"
+                          },
+                          {
+                          "Name":"Presentation Mode",
+                          "Category":"Viewing",
+                          "ImageName":"image3"
+                          }
+                          ],
+                  "type":""
+                  },
+                  {
+                  "name":"Annotation",
+                  "features":[
+                          {
+                          "Id":2,
+                          "Name":"Highlight",
+                          "Category":"Annotation",
+                          "Price":2.99,
+                          "ImageName":"image1"
+                          },
+                          {
+                          "Name":"FreeText",
+                          "Category":"Annotation",
+                          "Price":1.99,
+                          "ImageName":"image2"
+                          }
+                          ],
+                  "type":""
+                  }
+                  ]
+}
