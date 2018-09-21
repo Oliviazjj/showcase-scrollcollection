@@ -1,0 +1,66 @@
+{
+	"bannerCategory":{
+		"name":"",
+		"features":[
+				{
+				"ImageName":"enhancedWith3dTouch"
+				},
+				{
+				"ImageName":"drSeussBanner"
+				},
+				{
+				"ImageName":"indieGameBanner"
+				},
+				{
+				"ImageName":"clashRoyaleBanner"
+				}
+				],
+		"type":""
+	},
+	"categories":[
+				  {
+				  "name":"Viewing",
+				  "features":[
+							  {
+							  "Id":1,
+							  "Name":"View mode",
+							  "Category":"Viewing",
+							  "Description":"change background color",
+							  "ImageName":"image1"
+							  },
+							  {
+							  "Name":"Basic PDF Viewer",
+							  "Category":"Viewing",
+							  "Description":"plain pdf viewer",
+							  "ImageName":"image2"
+							  },
+							  {
+							  "Name":"Presentation Mode",
+							  "Category":"Viewing",
+							  "Description":"change the presentation mode",
+					
+							  }
+							  ],
+				  "type":""
+				  },
+				  {
+				  "name":"Annotation",
+				  "features":[
+							  {
+							  "Id":2,
+							  "Name":"Highlight",
+							  "Category":"Annotation",
+							  "Description":"highlight selected text",
+							  "ImageName":"image1"
+							  },
+							  {
+							  "Name":"FreeText",
+							  "Category":"Annotation",
+							  "Description":"input free text into document",
+							  "ImageName":"image2"
+							  }
+							  ],
+				  "type":""
+				  }
+				  ]
+}
